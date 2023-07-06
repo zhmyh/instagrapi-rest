@@ -2,9 +2,10 @@ from urllib import parse
 from instagrapi import Client
 from tinydb import TinyDB, Query
 import json
+from tinydb.storages import MemoryStorage
 
 class ClientStorage:
-    db = TinyDB('./db.json')
+    db = TinyDB(storage=MemoryStorage)
 
     def client(self):
         """Get new client (helper)
