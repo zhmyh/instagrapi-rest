@@ -17,9 +17,9 @@ router = APIRouter(
 
 @router.post("/media_feed_all", response_model=List[Dict])
 async def media_feed_all(sessionid: str = Form(...),
-                         post_type: POST_TYPE = "ALL",
-                         time_frame: TIME_FRAME = "TWO_YEARS",
-                         data_ordering: DATA_ORDERING = "REACH_COUNT",
+                         post_type = "ALL",
+                         time_frame = "TWO_YEARS",
+                         data_ordering = "REACH_COUNT",
                          count: int = 0,
                          clients: ClientStorage = Depends(get_clients)) -> List[Dict]:
     """Return medias with insights
