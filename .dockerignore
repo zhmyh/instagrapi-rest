@@ -8,3 +8,10 @@
 /CODE_OF_CONDUCT.md
 /LICENSE
 /logo.png
+
+README.md
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+.pytest_cache
